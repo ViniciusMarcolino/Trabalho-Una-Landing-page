@@ -1,0 +1,409 @@
+/* Reseta algumas configurações padrão para maior controle */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background-color: black;
+  background-image: linear-gradient(
+    50deg,
+    #0009ff 40%,
+    #000000,
+    transparent 100%
+  );
+}
+
+/* Menu fixo no topo */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  background-image: linear-gradient(
+    50deg,
+    #0009ff 8%,
+    #000000,
+    transparent 100%
+  );
+  color: white;
+  padding: 10px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+nav .menu-central {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 100px;
+  font-family: "Inter", sans-serif;
+}
+
+nav .menu-direita {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 25px;
+  font-family: "Inter", sans-serif;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+nav ul li a:hover {
+  color: #f0db4f;
+}
+
+nav .compre {
+  padding: 2px 30px;
+  border: 3px solid white;
+  border-radius: 15px;
+}
+
+nav .logo {
+  width: 84px;
+  height: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+}
+
+nav .logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Adiciona margem para compensar o menu fixo */
+#inicio {
+  margin-top: 80px;
+}
+
+section {
+  padding: 100px 20px; /* Ajuste para o menu fixo não cobrir o conteúdo */
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.texto {
+  color: white;
+}
+
+.central {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.titulo {
+  color: white;
+}
+
+/* Seção Início */
+#inicio .imagem-chamariz {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  margin-right: 500px;
+}
+
+#inicio p {
+  width: 45%;
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+#inicio .imagemprincipal {
+  width: 1256px;
+  height: 631px;
+  border-radius: 70px;
+  margin-left: 80px;
+}
+#inicio .chamariz {
+  width: 491px;
+  height: 325px;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77.45px;
+  color: white;
+  text-align: justify;
+  margin-left: auto;
+}
+
+#inicio .analises {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inicio .analises .inicio__analises {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#inicio .analises .review {
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  width: 450px;
+  text-align: left;
+}
+
+#inicio .analises .review h1 {
+  font-size: 2rem;
+  color: #f0db4f;
+  margin-right: 20px;
+  width: 50px;
+  text-align: center;
+}
+
+#inicio .analises .review img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+#inicio .analises .carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.carousel-button {
+  background-color: #f0db4f;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background-color: #ffc107;
+}
+
+/* Seção especificações */
+
+#especificacoes {
+  padding: 80px 20px;
+}
+
+#especificacoes .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#especificacoes h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.imagem-especificacoes {
+  width: 100%;
+  max-width: 1324px;
+  height: 550px;
+  margin: 35px auto;
+  border-radius: 80px;
+}
+
+#especificacoes .especificacoes-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+#especificacoes .coluna-texto {
+  width: 45%;
+  color: white;
+  position: relative;
+}
+
+#especificacoes .coluna-texto h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+#especificacoes .coluna-texto ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+/* Linha antes da primeira coluna */
+#especificacoes .coluna-texto:first-child::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ffffff;
+}
+
+/* Linha entre as duas colunas */
+#especificacoes .linha-central {
+  width: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Linha após a segunda coluna */
+#especificacoes .coluna-texto:last-child::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ffffff;
+}
+/* SEÇÃO SOBRE */
+#sobre {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.imagem-sobre {
+  max-width: 500px;
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.texto-container {
+  flex: 1;
+  color: white;
+  padding-left: 40px;
+  padding-top: 100px;
+}
+
+.texto-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+.texto-container p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+.descricao {
+  color: white;
+  margin-top: 20px;
+  max-width: 1200px;
+  text-align: left;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #inicio .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #inicio img,
+  #inicio p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .inicio__analises {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inicio__analises .review {
+    margin-bottom: 20px;
+  }
+
+  #sobre .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #sobre img {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
+.imagem-sobre {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.texto-container {
+  padding-left: 0;
+  text-align: center;
+}
