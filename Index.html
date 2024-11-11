@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -35,6 +35,7 @@
             class="logo"
             href="https://store.playstation.com/pt-br/concept/10007902"
             target="_blank"
+            aria-label="PlayStation Store"
           >
             <img alt="PSNlogo" src="img/psnlogosvg.svg" />
           </a>
@@ -44,6 +45,7 @@
             class="logo"
             href="https://www.xbox.com/pt-br/games/store/dragon-ball-sparking-zero/9n7xmjjhnfc3"
             target="_blank"
+            aria-label="Xbox Store"
           >
             <img alt="Xboxlogo" src="img/xboxlogosvg.svg" />
           </a>
@@ -80,14 +82,16 @@
           </div>
         </div>
         <div class="carousel-controls">
-          <button id="prevButton" class="carousel-button">Anterior</button>
-          <button id="nextButton" class="carousel-button">Próximo</button>
+          <button id="prevButton" class="carousel-button" aria-label="Anterior">
+            Anterior
+          </button>
+          <button id="nextButton" class="carousel-button" aria-label="Próximo">
+            Próximo
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- Seção Especificações -->
-    <!-- Título e Imagem da Seção Especificações -->
     <!-- Seção Especificações -->
     <section id="especificacoes">
       <div class="container">
@@ -114,7 +118,6 @@
             </ul>
           </div>
           <div class="linha-central"></div>
-          <!-- Linha central entre as colunas -->
           <div class="coluna-texto">
             <h3>RECOMENDADOS:</h3>
             <ul>
@@ -172,7 +175,6 @@
       </p>
     </section>
 
-    <!-- JavaScript para o Carrossel e Rolagem Suave -->
     <script src="script.js"></script>
   </body>
 </html>

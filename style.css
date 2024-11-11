@@ -1,4 +1,4 @@
-/* Reseta algumas configurações padrão para maior controle */
+/* Reseta configurações padrão */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +15,15 @@ body {
     #000000,
     transparent 100%
   );
+  color: white;
+}
+
+/* Estilos gerais */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
 }
 
 /* Menu fixo no topo */
@@ -35,11 +44,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav h1 {
-  margin-left: 20px;
   font-size: 20px;
+  margin-left: 20px;
 }
 
 nav ul {
@@ -53,8 +63,9 @@ nav .menu-central {
   display: flex;
   flex: 1;
   justify-content: center;
-  gap: 100px;
+  gap: 30px;
   font-family: "Inter", sans-serif;
+  flex-wrap: wrap;
 }
 
 nav .menu-direita {
@@ -62,7 +73,6 @@ nav .menu-direita {
   align-items: center;
   gap: 15px;
   margin-right: 25px;
-  font-family: "Inter", sans-serif;
 }
 
 nav ul li a {
@@ -70,7 +80,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 14px;
   display: inline-block;
-  margin-left: 5px;
+  padding: 5px 10px;
 }
 
 nav ul li a:hover {
@@ -78,100 +88,66 @@ nav ul li a:hover {
 }
 
 nav .compre {
-  padding: 2px 30px;
-  border: 3px solid white;
+  padding: 5px 20px;
+  border: 2px solid white;
   border-radius: 15px;
 }
 
-nav .logo {
-  width: 84px;
-  height: 76px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: white;
-}
-
 nav .logo img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  background-color: white;
+  border-radius: 50%;
 }
 
-/* Adiciona margem para compensar o menu fixo */
+/* Ajuste para compensar o menu fixo */
 #inicio {
   margin-top: 80px;
 }
 
 section {
-  padding: 100px 20px; /* Ajuste para o menu fixo não cobrir o conteúdo */
-}
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.texto {
-  color: white;
-}
-
-.central {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-}
-
-.titulo {
-  color: white;
+  padding: 100px 20px;
 }
 
 /* Seção Início */
 #inicio .imagem-chamariz {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   margin-bottom: 40px;
-  margin-right: 500px;
-}
-
-#inicio p {
-  width: 45%;
-  font-size: 1.2rem;
-  margin-left: 20px;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 #inicio .imagemprincipal {
-  width: 1256px;
-  height: 631px;
+  width: 100%;
+  max-width: 1256px;
+  height: auto;
   border-radius: 70px;
-  margin-left: 80px;
+  display: block;
+  margin: 0 auto;
 }
+
 #inicio .chamariz {
-  width: 491px;
-  height: 325px;
-  font-family: "Inter", sans-serif;
-  font-size: 64px;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 77.45px;
+  line-height: 1.5;
   color: white;
-  text-align: justify;
-  margin-left: auto;
+  text-align: center;
+  max-width: 90%;
 }
 
-#inicio .analises {
+/* Seção de Análises */
+.inicio__analises {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#inicio .analises .inicio__analises {
-  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  overflow: hidden;
 }
 
-#inicio .analises .review {
+.review {
   display: flex;
   align-items: center;
   background: #1e1e1e;
@@ -179,29 +155,27 @@ section {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
-  width: 450px;
+  width: 300px;
   text-align: left;
 }
 
-#inicio .analises .review h1 {
+.review h1 {
   font-size: 2rem;
   color: #f0db4f;
-  margin-right: 20px;
-  width: 50px;
-  text-align: center;
+  margin-right: 10px;
 }
 
-#inicio .analises .review img {
+.review img {
   width: 100%;
-  max-width: 350px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
-#inicio .analises .carousel-controls {
+
+.carousel-controls {
   display: flex;
-  justify-content: space-between;
-  width: 200px;
+  justify-content: center;
+  gap: 20px;
   margin-top: 10px;
 }
 
@@ -218,96 +192,53 @@ section {
   background-color: #ffc107;
 }
 
-/* Seção especificações */
-
+/* Seção Especificações */
 #especificacoes {
   padding: 80px 20px;
-}
-
-#especificacoes .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
 }
 
 #especificacoes h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
+  color: white;
 }
 
 .imagem-especificacoes {
   width: 100%;
   max-width: 1324px;
-  height: 550px;
+  height: auto;
   margin: 35px auto;
   border-radius: 80px;
 }
 
-#especificacoes .especificacoes-container {
+.especificacoes-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
-  position: relative;
+  justify-content: center;
+  text-align: left;
 }
 
-#especificacoes .coluna-texto {
-  width: 45%;
-  color: white;
-  position: relative;
+.coluna-texto {
+  width: 100%;
+  max-width: 500px;
 }
 
-#especificacoes .coluna-texto h3 {
+.coluna-texto h3 {
   color: #ffffff;
   font-size: 1.5rem;
   margin-bottom: 10px;
-  font-family: "Inter", sans-serif;
 }
 
-#especificacoes .coluna-texto ul {
+.coluna-texto ul {
   list-style-type: disc;
   padding-left: 20px;
   line-height: 1.5;
   font-size: 1rem;
-  font-family: "Inter", sans-serif;
 }
 
-/* Linha antes da primeira coluna */
-#especificacoes .coluna-texto:first-child::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #ffffff;
-}
-
-/* Linha entre as duas colunas */
-#especificacoes .linha-central {
-  width: 2px;
-  background-color: #ffffff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Linha após a segunda coluna */
-#especificacoes .coluna-texto:last-child::after {
-  content: "";
-  position: absolute;
-  right: -10px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #ffffff;
-}
-/* SEÇÃO SOBRE */
+/* Seção Sobre */
 #sobre {
   padding: 80px 20px;
   display: flex;
@@ -318,92 +249,113 @@ section {
 
 .sobre-container {
   display: flex;
-  align-items: flex-start;
-  gap: 50px;
-  max-width: 1200px;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
 .imagem-sobre {
+  width: 100%;
   max-width: 500px;
-  width: 70%;
-  height: auto;
   border-radius: 15px;
   object-fit: cover;
 }
 
 .texto-container {
-  flex: 1;
-  color: white;
-  padding-left: 40px;
-  padding-top: 100px;
+  max-width: 600px;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .texto-container h1 {
-  font-size: 24px;
+  font-size: 1.8rem;
   margin-bottom: 10px;
-  font-family: "Inter", sans-serif;
 }
 
 .texto-container p {
   margin-bottom: 10px;
   line-height: 1.5;
-  text-align: left;
-  font-family: "Inter", sans-serif;
 }
 
 .descricao {
   color: white;
+  max-width: 800px;
+  text-align: center;
+  font-size: 1rem;
   margin-top: 20px;
-  max-width: 1200px;
-  text-align: left;
-  width: 100%;
-  font-family: "Inter", sans-serif;
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+  .imagem-chamariz,
+  .analises {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu-central {
+    flex-direction: row;
+  }
+  .menu-direita {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
 @media (max-width: 768px) {
-  .sobre-container {
-    flex-direction: column;
-    align-items: center;
+  nav h1 {
+    font-size: 16px;
   }
 
-  #inicio .container {
-    flex-direction: column;
-    align-items: center;
+  nav {
+    padding: 8px 0;
   }
 
-  #inicio img,
-  #inicio p {
+  #inicio {
+    margin-top: 60px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .imagemprincipal {
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .chamariz {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 14px;
+  }
+
+  nav {
+    padding: 5px 0;
+  }
+
+  #inicio {
+    margin-top: 50px;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  .menu-direita {
+    gap: 8px;
+  }
+
+  .chamariz {
+    font-size: 1.5rem;
+  }
+
+  .imagemprincipal {
     width: 100%;
-    text-align: center;
+    max-width: none;
+    border-radius: 15px;
   }
-
-  .inicio__analises {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .inicio__analises .review {
-    margin-bottom: 20px;
-  }
-
-  #sobre .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #sobre img {
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
-}
-.imagem-sobre {
-  max-width: 100%;
-  margin-bottom: 20px;
-}
-
-.texto-container {
-  padding-left: 0;
-  text-align: center;
 }
